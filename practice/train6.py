@@ -81,8 +81,10 @@ def get_all_keys(payload, parent_key=''):
             keys.extend(get_all_keys(value, full_key))
     return keys
 #10
-def invert_dict(data):
-    #????
+def revers_dict(rev_dict:dict):
+    re_dict = {}
+    for k,v
+
 
 
 #Кортежи
@@ -137,17 +139,15 @@ is_active = False
 if not is_active:
 
 #3
-
 response_body = ""
 if not response_body:
 
 #4
-
 status_code = 404
 if status_code == 200:
     print("OK")
 elif status_code == 404:
-    print("Not Found")  # Not Found
+    print("Not Found")
 elif status_code == 500:
     print("Server Error")
 else:
@@ -155,7 +155,7 @@ else:
 #5
 response_time = 1.2
 if response_time > 1.0:
-    print("Critical: Slow")  # Critical: Slow
+    print("Critical: Slow")
 elif response_time > 0.5:
     print("Warning: Slowish")
 else:
@@ -179,7 +179,7 @@ def check_user_data(user):
 #9
 response = {"status": "success", "data": {"user": "Alice"}}
 if response.get("status") == "success" and "data" in response:
-    print("Valid successful response")  # Valid successful response
+    print("Valid successful response")
 else:
     print("Invalid response")
 #10
@@ -230,6 +230,7 @@ for key, value in response.items():
 #8
 users = [{"id": 1, "name": "A"}, {"id": 2, "name": "B"}]
 for user in users:
+
 #9
 def find_user_by_id(users_list, user_id):
     for user in users_list:
@@ -238,7 +239,8 @@ def find_user_by_id(users_list, user_id):
     return None
 #10
 test_data = [["user1", "pass1"], ["user2", "pass2"]]
-for row in test_data:
-    for item in row:
-        print(item)
+for username, password in test_data:
+    print(f"Username: {username}")
+    print(f"Password: {password}")
+    print("---")
 

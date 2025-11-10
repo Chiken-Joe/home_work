@@ -1,4 +1,4 @@
-from practice.train6 import value
+
 
 
 def simple_calculatir(a, b):
@@ -81,11 +81,11 @@ def task8():
         print("2. Запрос завершен (очистка)")
 print(f"Задание 1.8:")
 
-def task8(response):
+def validate_response(response):
     if "status" not in response:
         raise ValueError("Ответ не содержит поля 'status")
     return "Статус есть"
-    
+
 
 
     
