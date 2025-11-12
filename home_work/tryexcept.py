@@ -84,7 +84,27 @@ print(f"Задание 1.8:")
 def validate_response(response):
     if "status" not in response:
         raise ValueError("Ответ не содержит поля 'status")
-    return "Статус есть"
+    return "Статус присутствует"
+
+print(f"Задание 1.9: ", end="")
+try:
+    print(validate_response({"data": "test"}))
+except ValueError as e:
+    print(e)
+
+class SchemaError(Exception):
+    pass
+
+def check_schema(data):
+    if "id" not in data:
+        raise SchemaError("Поле 'id' обязательно")
+    return "Схема валидна"
+
+print(f"Задание 2.0: ", end="")
+try:
+    print(check_schema({"name": "test"}))
+except SchemaError as e:
+    print(e)
 
 
 
