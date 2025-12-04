@@ -78,7 +78,13 @@ class UserClient(BaseClient):
         return self.session.get(self.base_url + "/auth/me/")
 
 
-
+class PostClient(BaseClient):
+    def create_post(self, user_id, post_payload):
+        response = self.session.post(
+            self.base_url + f"/users/{user_id}/posts/",
+            json=post_payload
+        )
+        return response
 
 
 
